@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/kliver98/books-ui-E2E#readme",
   "devDependencies": {
-    "cypress": "^6.8.0"
+    "cypress": "^6.8.0",
+    "faker": "^5.4.0"
   },
   "dependencies": {
     "mocha": "^8.3.2"
