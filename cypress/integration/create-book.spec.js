@@ -8,7 +8,7 @@ describe('When the user wants to add a book',() => {
         cy.intercept('POST', '/books').as('new-book')
         cy.visit('/');
         cy.get('.ant-select-selection-item').click() //With the pagination, should do Conditional Testing and it's not a good idea for e2e
-        cy.get('[ng-reflect-value="50"]').click()
+        cy.contains('50 / page').click()
         cy.getBySel('btn-add-book').click();
         cy.getBySel('inp-new-name').type(book.name);
         cy.getBySel('inp-new-author').type(book.author);
