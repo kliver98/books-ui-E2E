@@ -10,8 +10,8 @@ describe('When the user wants to add a book',() => {
         cy.get('.ant-select-selection-item').click() //With the pagination, should do Conditional Testing and it's not a good idea for e2e
         cy.contains('50 / page').click()
         cy.getBySel('btn-add-book').click();
-        cy.getBySel('inp-new-name').type(book.name);
-        cy.getBySel('inp-new-author').type(book.author);
+        cy.getBySel('inp-new-name').click().type(book.name);
+        cy.getBySel('inp-new-author').click().type(book.author);
         cy.getBySel('btn-new-save').click();
         cy.wait('@new-book').then((int) => response=int.response)
         
