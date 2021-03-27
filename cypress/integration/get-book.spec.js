@@ -1,5 +1,4 @@
 const { describe } = require("mocha");
-import book from '../fixtures/book.json';
 
 let response;
 describe('When user enter the web page and see all books',() => {
@@ -18,8 +17,8 @@ describe('When user enter the web page and see all books',() => {
 
     it('Then display more than 0 books',async() => { //More than 0 because by default are 20
         cy.get('tr').within(rowsOfBooks => {
-            let nRows = Object.keys(rowsOfBooks).length;
-            expect(nRows).to.be.greaterThan(1) //1 because first it's the header [0,1,...n-1]
+            let numRows = Object.keys(rowsOfBooks).length;
+            expect(numRows).to.be.greaterThan(1) //1 because first it's the header [0,1,...n-1]
         });
     });
 

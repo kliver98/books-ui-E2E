@@ -6,3 +6,4 @@ I assume allways will be 2 column name and 3 author.
 Another assumption it's there will be no more than 50 books,
 because there will be another page on pagination and may not
 found some book in the DOM.
+There is an error that 'x' does not do anything, when add book.
