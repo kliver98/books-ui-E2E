@@ -1,9 +1,10 @@
 Here, I decide to edit front-end books-ui for best practices.
-So I putted attribute data-test for rows of books and be able
-of search by that special attribute. Sacrificing best location
-on element, such as differencing name from author; in this case
-I assume allways will be 2 column name and 3 author.
+So I putted attribute data-test for rows of books and elements
+like input and buttons to be able of search by that special attribute.
+Sacrificing best location on element, such as differencing name from author; 
+in this case I assume allways the 2 td will be name and 3 td author.
 Another assumption it's there will be no more than 50 books,
 because there will be another page on pagination and may not
 found some book in the DOM.
-There is an error that 'x' does not do anything, when add book.
+There is a bug that 'x' does not do anything, when add book.
+But I don't fixed.
