@@ -17,14 +17,6 @@ jobs:
         with:
           browser: chrome
           command: npm run test:e2e:ui:headless
-      - name: Wait on tests
-        # or lewagon/wait-on-check-action@master, but master is not guaranteed to be stable ATM
-        uses: lewagon/wait-on-check-action@v0.2
-        with:
-          ref: ${{ github.ref }} # can be commit SHA or tag too
-          #check-name: test # name of the existing check - omit to wait for all checks
-          repo-token: ${{ secrets.GH_TOKEN }}
-          wait-interval: 120 # seconds
       - name: send dispatch
         uses: peter-evans/repository-dispatch@v1
         with:
