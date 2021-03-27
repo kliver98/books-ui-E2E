@@ -1,0 +1,5 @@
+Here, I decide to edit front-end books-ui for best practices.
+So I putted attribute data-test for rows of books and be able
+of search by that special attribute. Sacrificing best location
+on element, such as differencing name from author; in this case
+I assume allways will be 2 column name and 3 author.

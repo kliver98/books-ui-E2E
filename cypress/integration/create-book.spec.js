@@ -17,14 +17,12 @@ describe('When the user wants to add a book',() => {
         
     })
     
-    it('Then status code should be 200 OK',() => {
-        expect(response.statusCode).to.equal(200); //Not set 201 created in backend
-    })
-    
     it('Then the book should be listed with the [name, author]',() => {
         let id = response.body.id;
-        cy.getBySel(`txt-name-book-${id}`).should('have.text',book.name);
-        cy.getBySel(`txt-author-book-${id}`).should('have.text',book.author);
+        cy.getBySel(`tr-book-${id}`).within(() => {
+            cy.get('td').eq(1).should('have.text', book.name);
+            cy.get('td').eq(2).should('have.text', book.author);
+        });
     })
 
 });
