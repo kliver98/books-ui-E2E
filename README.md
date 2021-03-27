@@ -13,3 +13,5 @@ Steps to execute the test in headless mode:
 - `cd books-ui-E2E`
 - `npm i`
 - `npm run test:e2e:ui:headless`
+
+To be aware of some assertions and annotations I made in this exercise, please read READ.txt
