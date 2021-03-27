@@ -1,13 +1,10 @@
-# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
 name: Test CI
 
 on:
   push:
     branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   cypress-run:
@@ -20,3 +17,17 @@ jobs:
         with:
           browser: chrome
           command: npm run test:e2e:ui:headless
+      - name: Wait on tests
+        # or lewagon/wait-on-check-action@master, but master is not guaranteed to be stable ATM
+        uses: lewagon/wait-on-check-action@v0.2
+        with:
+          ref: ${{ github.ref }} # can be commit SHA or tag too
+          #check-name: test # name of the existing check - omit to wait for all checks
+          repo-token: ${{ secrets.GH_TOKEN }}
+          wait-interval: 120 # seconds
+      - name: send dispatch
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          repository: kliver98/books-ui
+          event-type: TestsPassed
