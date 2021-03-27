@@ -1,0 +1,17 @@
+[
+    {
+        "id":"8dc30f56-0f1f-464e-bf48-5a25373e2f81",
+        "name":"TEST: Peopleware: Productive Projects and Teams",
+        "author":"Tom DeMarco and Timothy Lister"
+    },
+    {
+        "id":"8fe4dba5-ef9e-4dd6-80b7-86309678f76a",
+        "name":"TEST: The Clean Coder: A Code of Conduct for Professional Programmers",
+        "author":"Robert C. \"Uncle Bob\" Martin"
+    },
+    {
+        "id":"2bd45fc2-4df5-43ca-946a-c1b659aa8518",
+        "name":"TEST: Introduction to Algorithms",
+        "author":"Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein"
+    }
+]
